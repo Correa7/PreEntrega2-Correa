@@ -42,10 +42,11 @@ body {
     transform: scale(1.2);
 }
 .collapse {
-    justify-content: flex-end;
+    justify-content:space-around;
+    
 }
 .navbar-nav .nav-item{
-    margin-left: 50px;
+    margin-left: 60px;
 }
 .navbar-nav .nav-item .nav-link {
     
