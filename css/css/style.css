@@ -10,9 +10,10 @@
 }
 
 body {
-    background-image:url("../img/back-01.jpg");
+    background-image: url("../../img/back.jpg");
     background-repeat: repeat;
     background-size: 100%;
+    /* background-color: #000000; */
 }
 
 
@@ -89,7 +90,13 @@ body {
     opacity: 0.8;
     border: solid;
     border-color: #29f8ff;
-    margin: 30px
+    border-radius: 20px;
+    margin: 30px;
+    animation-name: opacity;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+
 }
 h1 {
     font-size: 30px;
@@ -218,22 +225,7 @@ p {
     border-radius: 5px;
     margin: 5px 0px;
 }
-.news-btn {
-    font-size: 15px;
-    color: #000000;
-    padding: 5px 15px;
-    margin: 15px 0px;
-    background: #29f8ff ;
-    border: none ;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: all 0.3s;
-}
-.news-btn:hover {
-    color: #000000;
-    background: #f305f7 ;
-    transform: scale(1.1);
- }
+
 
 /*  ########################### TERMS #########################  */
 
@@ -317,53 +309,80 @@ p {
 
 /* ######################### ESTUDIOS ###################### */
 
-.cuerpo-estudio {
-    padding: 10px 50px;
-}
 .card-estudio-1 {
-    background-color: white;
+    padding: 10px 50px;
+    background-color: black;
+    opacity: 0.9;
     border: solid;
     border-color: #29f8ff;
-    padding: 10px;
-    margin: 0px;
-    width: 100%;
-    height: 1000px;
     border-radius: 20px;
+    display: grid;
+    grid-template-areas: 
+    "uno dos dos"
+    "cuatro cuatro tres"
+    
+    ;
+    grid-column-gap: 5px ;
+    grid-row-gap: 5px;    
 }
 
-.imag-estudio-1 img {
-    height: 200px;
-    width: 200px;
-    float: left;
-    margin: 10px 10px;
+.imag-estudio-1{
+    background-color:white ;
+    grid-area: uno;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px ;
+    margin: 20px;
 }
-.imag-estudio-1 h5 {
-    font-size:30px;
-    color: #f305f7;
-    margin: 20px 50px;
+.text-estudio-1 {
+    grid-area: dos;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px ;
+}
+.imag-estudio-2{
+    grid-area: tres;
+    padding: 25px ;
+}
+.text-estudio-2{
+    grid-area: cuatro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px ;
     
 }
-.imag-estudio-1 p {
-    font-size:20px;
-    color:#000000;
-    margin: 10px 10px ;
+.imag-estudio-1 img {
+    width: 200px;
+    height: 200px;
 }
 .imag-estudio-2 img {
-    margin: 15px 15px;
-    height: 500px;
     width: 500px;
-    float: left;
+    height: 500px;
 }
-.imag-estudio-2 h5 {
+.text-estudio-1 h5 {
+    font-size:30px;
+    color: red;
+    
+    
+}
+.text-estudio-1 p {
+    font-size:20px;
+    
+    
+}
+
+.text-estudio-2 h5 {
     font-size:30px;
     color:red;
-    margin: 30px 50px;
-    padding: 15px;
+    
 }
-.imag-estudio-2 p {
+.text-estudio-2 p {
     font-size:20px;
-    color:#000000;
-    margin: 10px 10px ;
+    
+    
 }
 .card-title-1 {
     font-size: 20px;
@@ -522,6 +541,15 @@ p {
         transform: translateX(0);  
     }
 }
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+  
+    100%{
+        opacity: 0.8; 
+    }
+}
 
 /* #################### Break points  ###########################*/
 
@@ -586,14 +614,47 @@ p {
     .buttons button {
         margin: 20px;
     }
+    .cuerpo-estudio {
+        padding: auto;
+    }
+    .card-estudio-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .imag-estudio-1 img {
+        width: 200px;
+        height: 200px;
+    }
+    .imag-estudio-2 img {
+        width: 400px;
+        height: 400px;
+    }
+    
     
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 424px){
     .video iframe{
         width: 300px;
         height: 200px;
         margin: 15px;
+    }
+    .imag-estudio-1 {
+        margin-top: 20px;
+    }
+    .imag-estudio-2 {
+        margin: 0px;
+    }
+    .imag-estudio-1 img {
+        width: 200px;
+        height: 200px;
+    }
+    .imag-estudio-2 img {
+        width: 250px;
+        height: 250px;
     }
 
 }
