@@ -98,9 +98,48 @@ body {
     animation-timing-function: ease-in-out;
 
 }
-h1 {
+.saludo-2 {
+    padding: 9px 50px;
+    background-color: #000000;
+    opacity: 0.8;
+    border: solid;
+    border-color: #29f8ff;
+    border-radius: 20px;
+    margin: 30px;
+    animation-name: enter-left;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+
+}
+.saludo-3 {
+    padding: 9px 50px;
+    background-color: #000000;
+    opacity: 0.8;
+    border: solid;
+    border-color: #29f8ff;
+    border-radius: 20px;
+    margin: 30px;
+    animation-name: enter-up;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+
+}
+.saludo h1 {
     font-size: 30px;
     color:#29f8ff;
+    padding: 15px;
+}
+.saludo-2 h1 {
+    font-size: 30px;
+    color:red;
+    padding: 15px;
+}
+.saludo-3 h1 {
+    font-size: 30px;
+    color:#f308e3e0;
+    padding: 15px;
 }
 p {
     font-size: 20px;
@@ -280,6 +319,7 @@ p {
 }
 .about-text {
     background-color: #000000;
+    opacity: 0.9;
     animation-name: enter-left;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
@@ -470,43 +510,72 @@ p {
 
 
 /* ##################### Contactos ############################## */
-
-.redes-list {
-    display:flex;
+.contact {
+    margin: 0px 20px;
+    border: solid;
+    border-color: #29f8ff;
+    display: flex;
     flex-direction: row;
-    justify-content: center;
-    background-color: black;
-}
-.redes img{
-    height: 30px;
-    width: 30px;
-    margin: 30px 0px;
-  
-}
-.redes-list li {
-    display: inline-block;
-    padding: 0 20px;
-}
-.header .nav-links a {
-    font-size: 700;
-    color: #29f8ff;
-    text-decoration: none;
-}
-.redes li:hover{
-    transform: scale(1.1);
 
 }
 .contact-imag {
-    background-color: black;
-    height: 650px;
-    width: 500px;
-    padding:0px;
-    margin: 0px;
+    padding: 20px;
+    animation-name: opacity;
+    animation-duration: 3.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    
 }
 .contact-imag img {
     height: 500px;
     width: 500px;
 }
+.contact-text {
+    background-color: #000000;
+    opacity: 0.9;
+    padding: 20px;
+    animation-name: enter-right;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+.contact-text-1 h2 {
+    color: white;
+    font-size: 30px;
+    padding:5px;
+    margin: 20px 20px;  
+}
+.contact-text-1 p {
+    font-size: 20px;
+    padding:5px;
+    margin: 10px 20px;
+
+}
+.contact-text-1 span {
+    color: #29f8ff;
+    font-size: 30px; 
+}
+.redes-list {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:black;
+    opacity: 0.9;
+    border-top: #29f8ff;
+}
+.redes-list img{
+    height: 30px;
+    width: 30px;
+    margin: 30px 0px; 
+}
+.redes-list span {
+    display: inline-block;
+    padding: 0 20px;
+}
+.redes-list span:hover{
+    transform: scale(1.1);
+}
+
 
 /* ##################### under - construction ################### */
 
@@ -521,9 +590,10 @@ p {
 }
 /*  #######################  Animaciones  ######################### */
 
+
 @keyframes enter-right {
     0%{
-        transform: translateX(-800px);
+        transform: translateX(-1200px);
     }
 
   
@@ -534,6 +604,16 @@ p {
 @keyframes enter-left {
     0%{
         transform: translateX(1500px);
+    }
+
+  
+    100%{
+        transform: translateX(0);  
+    }
+}
+@keyframes enter-up {
+    0%{
+        transform: translateY(-1000px);
     }
 
   
@@ -632,11 +712,27 @@ p {
         width: 400px;
         height: 400px;
     }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin:  5px;
+    }
+    .contact-imag img {
+        width: 500px;
+        height: 500px;
+    }
+    .redes-list {
+        display:flex;
+        flex-wrap: wrap;
+       
+    }
     
     
 }
 
-@media screen and (max-width: 424px){
+@media screen and (max-width: 426px){
     .video iframe{
         width: 300px;
         height: 200px;
@@ -656,5 +752,10 @@ p {
         width: 250px;
         height: 250px;
     }
+    .contact-imag img {
+        width: 250px;
+        height: 250px;
+    }
+    
 
 }
