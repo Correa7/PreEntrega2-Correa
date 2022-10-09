@@ -45,6 +45,10 @@ body {
     justify-content:space-around;
     
 }
+.collapse .navbar-nav{
+    background-color: #000000;
+    opacity: 0.9;
+}
 .navbar-nav .nav-item{
     margin-left: 60px;
 }
@@ -68,7 +72,8 @@ body {
     opacity: 0.5;
 }
 
-/*  ####### Carousel modificaciones ###### */
+
+/*  ########################### CAROUSEL #########################  */
 
 .carousel{
     margin: 30px;
@@ -76,7 +81,7 @@ body {
     border-color: #29f8ff;
 }
 
-/* ########### end Carousel ############ */
+/*  ########################### SALUDO #########################  */
 
 .saludo {
     padding: 9px 50px;
@@ -95,7 +100,9 @@ p {
     color:white;
 }
 
-/* ########### Card home ########### */
+
+/*  ########################### CARD HOME #########################  */
+
 
 .cuerpo {
     display: flex;
@@ -148,7 +155,9 @@ p {
 
 }
 
-/* #################  footer ##################### */
+
+/*  ########################### FOOTER #########################  */
+
 
 .footer {
     background-color: #000000;
@@ -226,8 +235,8 @@ p {
     transform: scale(1.1);
  }
 
+/*  ########################### TERMS #########################  */
 
-/* ################## Terms  ##############*/
 .terms {
     background-color: #000000;
     display: flex;
@@ -255,28 +264,23 @@ p {
     color: white;
 }
 
-/*  ########################### ABOUT ######################### */
+/*  ########################### ABOUT #########################  */
 
 .about {
   
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 500px;
-    padding: 0px;
-    width:100%;
-
+   
 }
 .about-imag {
-    height: 500px;
-    width: 500px;
-    padding:0px;
-    margin: 0px;
+    
     animation-name: enter-right;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
-    /* animation-delay: 0.5s; */
+
 }
 .about-imag img {
     height: 500px;
@@ -284,18 +288,10 @@ p {
 }
 .about-text {
     background-color: #000000;
- 
-    width:100%;
-    padding:0px;
-    margin:20px 0px;
-
     animation-name: enter-left;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    /* animation-delay: 1.5s; */
-    
-
+    animation-timing-function: ease-in-out;    
 }
 .about-text-1 {
     padding:20px 20px;
@@ -310,7 +306,6 @@ p {
     margin: 20px 20px;  
 }
 .about-text-span {
-
     color: #29f8ff;
     font-size: 30px;    
 }
@@ -318,7 +313,6 @@ p {
     font-size: 20px;
     padding:5px;
     margin: 10px 20px;
-    
 }
 
 /* ######################### ESTUDIOS ###################### */
@@ -335,7 +329,6 @@ p {
     width: 100%;
     height: 1000px;
     border-radius: 20px;
-  
 }
 
 .imag-estudio-1 img {
@@ -388,95 +381,74 @@ p {
 /* #################### Proyectos ############################### */
 
 .proyect {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-radius: 20px;
-    height: 600px;
-}
-.body {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    display:grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr;
     
 }
+
 .card-1 {
+    background-color: #000000;
+    opacity: 0.9;
     display:flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction:column;
     border: solid;
     border-color: #29f8ff;
-    width: 300px;
-    height: 500px;
-    border-radius: 20px;
+    margin: 10px;
 }
 
-.body .card-1 .card-img {
-    height: 150px;
-    width: 280px;
-    margin: 20px 40px;
-    display: flex;
-    align-items: center;
+.card-img img {
+    height: 150px ;
+    width: 260px; 
+}  
+
+.card-body {
+    display: inline-block;
+    margin-bottom: 20px;
  
 }
-.body .card-1 .card-img img {
-    max-height: 150px ;
-    max-width: 260px;
-    margin: 0px 10px;
-}
-
-.body .card-body {
-    display: inline-block;
-    padding: 20px 20px;
-}
-.body .card-body .card-title {
+.card-body .card-title {
     font-size: 20px; 
     color: white;  
 }
-.body .card-body .card-text {
+.card-body .card-text {
     font-size: 15px;
     color: white;
 }
 
-.body .card-2 {
-
+.card-2 {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: #000000;
+    opacity: 0.9;
     border: solid;
     border-color: #29f8ff;
     padding: 10px;
     margin: 5px;
-    height: 500px;
-    border-radius: 20px;
+
+   
 }
-.iframe {
-    margin: 30px 60px 40px;
+.video {
+   
     border-color: #29f8ff;
 }
-.iframe iframe {
+.video iframe {
     border-color: #29f8ff;
+    width: 560px; 
+    height: 315px ;
 }
 .buttons {
-    display:flex;
-    flex-direction: row;
+    display: inline-block;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+    padding: 50px; 
 }
 .buttons button {
-    font-weight: 400;
-    color: #000000;
     padding: 9px 25px;
     margin: 0px 50px;
-    background: #29f8ff ;
-    border: none;
-    border-radius: 50px;
-    transition: all 0.3s ;
 }
-.buttons button:hover {
-    color: #000000;
-    background: #f305f7 ;
-    transform: scale(1.1);
 
-}
 
 /* ##################### Contactos ############################## */
 
@@ -528,7 +500,7 @@ p {
     width: 400px;
 
 }
-/*  ############ Animaciones  ################## */
+/*  #######################  Animaciones  ######################### */
 
 @keyframes enter-right {
     0%{
@@ -551,7 +523,7 @@ p {
     }
 }
 
-/* ############# Break points */
+/* #################### Break points  ###########################*/
 
 
 @media screen and (max-width: 768px) {
@@ -565,13 +537,6 @@ p {
      .cuerpo { 
         display: flex;
         flex-direction: column; 
-
-        /* display: grid;
-        align-items: center;
-        padding: 9px 50px;
-        grid-template-rows: repeat(3, 1fr);
-        grid-row-gap: 10px ; */
-        
     } 
     .footer {
         display: flex;
@@ -591,6 +556,44 @@ p {
         justify-content: space-between;
         margin-left: 10px;
     }
+    .about { 
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .about-imag img {
+        height: 300px;
+        width: 300px;
+    }
+    .proyect {
+       display: grid;
+       grid-template-columns: auto;
+        
+    }
+    .card-1{
+        margin: 0%;
+    }
+    .card-2{
+        margin: 0%;
+    }
+ 
+    .buttons {
+        display:flex;
+        flex-direction:column;
+        padding: 0%;
+        margin: 20px;  
+    }
+    .buttons button {
+        margin: 20px;
+    }
     
-    
+}
+
+@media screen and (max-width: 425px){
+    .video iframe{
+        width: 300px;
+        height: 200px;
+        margin: 15px;
+    }
+
 }
