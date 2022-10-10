@@ -580,7 +580,10 @@ p {
 /* ##################### under - construction ################### */
 
 .page-build{
-    margin: 10px 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .page-build img {
@@ -728,8 +731,12 @@ p {
         flex-wrap: wrap;
        
     }
+   
+    .page-build img {
+        height: 450px;
+        width: 400px;
     
-    
+    }
 }
 
 @media screen and (max-width: 426px){
@@ -755,6 +762,11 @@ p {
     .contact-imag img {
         width: 250px;
         height: 250px;
+    }
+    .page-build img {
+        height: 250px;
+        width: 200px;
+    
     }
     
 
