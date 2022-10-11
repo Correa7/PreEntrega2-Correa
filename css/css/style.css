@@ -106,8 +106,22 @@ body {
     border-color: #29f8ff;
     border-radius: 20px;
     margin: 30px;
-    animation-name: enter-left;
+    animation-name: enter-right;
     animation-duration: 1.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+
+}
+.saludo-2 h1 {
+    animation-name: opacity;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+
+}
+.saludo-2 p {
+    animation-name: enter-up;
+    animation-duration: 2.3s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
 
@@ -511,11 +525,10 @@ p {
 
 /* ##################### Contactos ############################## */
 .contact {
-    margin: 0px 20px;
+  
     border: solid;
     border-color: #29f8ff;
-    display: flex;
-    flex-direction: row;
+ 
 
 }
 .contact-imag {
@@ -526,7 +539,7 @@ p {
     animation-timing-function: ease-in-out;
     
 }
-.contact-imag img {
+.img-1 {
     height: 500px;
     width: 500px;
 }
@@ -626,11 +639,24 @@ p {
 }
 @keyframes opacity {
     0%{
+       
         opacity: 0;
     }
   
     100%{
+        opacity: 0.8;
+        
+    }
+}
+@keyframes opacity-enter-up {
+    0%{
+        opacity: 0;
+        transform: translateY(-1000px);
+    }
+  
+    100%{
         opacity: 0.8; 
+        transform: translateX(0); 
     }
 }
 
@@ -715,16 +741,9 @@ p {
         width: 400px;
         height: 400px;
     }
-    .contact {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin:  5px;
-    }
     .contact-imag img {
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        height: 400px;
     }
     .redes-list {
         display:flex;
@@ -759,9 +778,30 @@ p {
         width: 250px;
         height: 250px;
     }
+     .contact {
+       padding: 5px;
+        margin:  0px;
+    }
+    .contact-text-1 h2 {
+        font-size: 25px;
+        padding: 5px;
+        margin:  0px;
+    }
+    .contact-text-1 p {
+        font-size: 18px;
+        padding: 5px;
+        margin:  0px;
+    }
+    .contact-text-1 span {
+        color: #29f8ff;
+        font-size: 25px;
+        padding: 5px;
+        margin:  0px;
+    } 
     .contact-imag img {
         width: 250px;
         height: 250px;
+      
     }
     .page-build img {
         height: 250px;
